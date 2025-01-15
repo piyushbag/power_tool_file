@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Table</title>
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Power Measurements Dashboard - Marketing</h1>
+        <table id="marketingTable" class="display">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Code Name</th>
+                    <th>Product Family</th>
+                    <th>CPU Card</th>
+                    <th>Chip Set</th>
+                    <th>Sys-Zero PWR</th>
+                    <th>Typical Input PWR (Wall)</th>
+                    <th>35C-SysMax-All Optics</th>
+                    <th>46C-SysMax-All Optics</th>
+                    <th>Document Link</th>
+                    <th>Comments</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>DCS-7132LB-48Y4C-F</td>
+                    <td>Malabar-STD</td>
+                    <td>1RU</td>
+                    <td>Lorikeet-Prime 8C-16T</td>
+                    <td>VU9P-3</td>
+                    <td>121.512</td>
+                    <td>155.812</td>
+                    <td>192.8</td>
+                    <td>198.875</td>
+                    <td><a href="https://docs.google.com/spreadsheets/d/1z4dueV..." target="_blank">Document Link</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>DCS-7050CX3-32S</td>
+                    <td>Lodoga</td>
+                    <td>1RU</td>
+                    <td>Crow-Steppeagle</td>
+                    <td>Trident3X7</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="Summary Link" target="_blank">Summary Link</a></td>
+                    <td>MSFT config</td>
+                </tr>
+                <!-- Add additional rows here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#marketingTable').DataTable({
+                responsive: true
+            });
+        });
+    </script>
+</body>
+</html>
